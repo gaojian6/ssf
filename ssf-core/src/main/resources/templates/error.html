@@ -1,0 +1,126 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:th="http://www.thymeleaf.org" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.thymeleaf.org ">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <title th:if="${status==500}">System Error</title>
+    <title th:if="${status==404}">Not Found</title>
+    <title th:if="${status==403}">Access Denied</title>
+    <link th:href="@{/images/common.css}" rel="stylesheet" type="text/css" />
+    <link th:href="@{/images/public.css}" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<!-- 主体 -->
+<div class="g-in f-cb">
+    <!-- 文本区 -->
+    <div class="m-textarea">
+        <div class="m-titbox">Your request cannot be processed</div>
+        <div class="m-txt01">sorry,an error has occurred.</div>
+        <div class="m-txt02">
+            Status:<span th:text="${status}"></span>(<span th:text="${error}"></span>)<br/>
+            Message:&nbsp;(<span th:text="${message}"></span>）
+        </div>
+        <div class="m-nub">
+            <img th:if="${status==500}" th:src="@{/images/img-number500.png}" />
+            <img th:if="${status==403}" th:src="@{/images/img-number403.png}" />
+            <img th:if="${status==404}" th:src="@{/images/img-number404.png}" />
+        </div>
+        <div th:if="${!#strings.isEmpty(trace)}" class="m-detbox f-cb">
+            <div id="js-btn" onclick="func();" class="m-morebox">MORE</div>
+            <div th:text="${trace}" id="js-cont" class="m-contbox">
+
+            </div>
+        </div>
+    </div>
+    <!-- 文本区 END -->
+    <!-- 底部链接 -->
+    <div class="m-foot"><a href="http://www.icourt.cc">http://www.icourt.cc</a>&nbsp;&nbsp;丨&nbsp;&nbsp;ssf (v<span th:text="${applicationVersion}"></span>)</div>
+    <!-- 动画区 -->
+    <div th:if="${status==500}">
+        <!-- 人&球 -->
+        <div class="m-cato500bp">
+            <!-- 球 -->
+            <div class="m-ball"></div>
+            <!-- 人 -->
+            <div class="m-500peop">
+                <div class="m-500eye"></div>
+            </div>
+        </div>
+        <!-- 卫星 -->
+        <div class="m-cato500moon"></div>
+        <div class="m-cato500moon2"></div>
+    </div>
+    <!-- 动画区 END -->
+    <div th:if="${status==403}">
+        <!-- 动画区 -->
+        <!-- 门 -->
+        <div class="m-catodoor">
+            <div class="m-keypan"></div>
+        </div>
+        <!-- 人&球 -->
+        <div class="m-catobp">
+            <!-- 球 -->
+            <div class="m-ball"></div>
+            <!-- 人 -->
+            <div class="m-peop">
+                <div class="m-to">
+                    <div class="m-eye"></div>
+                </div>
+                <div class="m-leftarm"></div>
+                <div class="m-rightarm"></div>
+                <div class="m-bady"></div>
+            </div>
+            <!-- 钥匙 -->
+            <div class="m-catocloud">
+                <div class="m-key"></div>
+            </div>
+        </div>
+        <!-- 卫星 -->
+        <div class="m-catomoon"></div>
+        <!-- 动画区 END -->
+    </div>
+    <div th:if="${status==404}">
+        <div class="m-cato404bp">
+            <!-- 球 -->
+            <div class="m-ball"></div>
+            <!-- 人 -->
+            <div class="m-404peop">
+                <div class="m-leftleg"></div>
+                <div class="m-rightleg"></div>
+            </div>
+            <div class="m-num01"></div>
+            <div class="m-num02"></div>
+            <div class="m-404boom"></div>
+        </div>
+        <!-- 卫星 -->
+        <div class="m-cato404moon"></div>
+        <div class="m-cato404moon2"></div>
+    </div>
+</div>
+<!-- /主体-->
+<div th:if="${status==500}" style="display: none">
+    <img th:src="@{/images/img-500bady02.png}" alt=""/>
+</div>
+</body>
+<script>
+    var jcont = document.getElementById("js-cont");
+    var jbtn = document.getElementById("js-btn");
+    if(jcont) {
+        jcont.style.display = "none";
+    }
+    function func() {
+        if(jcont.style.display == "block"){
+            jcont.style.display = "none";
+            jbtn.className="m-morebox";
+            jbtn.innerHTML = "MORE";
+        }else{
+            jcont.style.display = "block";
+            jbtn.className="m-down";
+            jbtn.innerHTML = "RETRACT";
+        }
+    }
+</script>
+</html>
+

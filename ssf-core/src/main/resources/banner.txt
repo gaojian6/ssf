@@ -1,0 +1,5 @@
+${AnsiColor.GREEN}█▀▀ █▀▀█ █▀▀ █▀▀ ▀▀█▀▀ █░░█ 　 ${AnsiColor.RED}█▀▀ ▀▀█▀▀ █▀▀█ █▀▀▄ █░░ █▀▀ 　 ${AnsiColor.GREEN}█▀▀ █▀▀█ █▀▀ ▀▀█▀▀
+${AnsiColor.GREEN}▀▀█ █▄▄█ █▀▀ █▀▀ ░░█░░ █▄▄█ 　 ${AnsiColor.RED}▀▀█ ░░█░░ █▄▄█ █▀▀▄ █░░ █▀▀ 　 ${AnsiColor.GREEN}█▀▀ █▄▄█ ▀▀█ ░░█░░
+${AnsiColor.GREEN}▀▀▀ ▀░░▀ ▀░░ ▀▀▀ ░░▀░░ ▄▄▄█ 　 ${AnsiColor.RED}▀▀▀ ░░▀░░ ▀░░▀ ▀▀▀░ ▀▀▀ ▀▀▀ 　 ${AnsiColor.GREEN}▀░░ ▀░░▀ ▀▀▀ ░░▀░░
+${Ansi.GREEN} :: safety stable fast :: ${Ansi.DEFAULT}${AnsiStyle.FAINT} Spring Boot${spring-boot.formatted-version}
+${Ansi.GREEN} :: http://www.icourt.cc   :: ${AnsiColor.DEFAULT}${AnsiColor.RED} SSF (v1.0-SNAPSHOT)

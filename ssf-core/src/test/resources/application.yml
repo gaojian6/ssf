@@ -1,0 +1,20 @@
+
+server:
+    context-path: /ssf
+    port: 8080
+#spring:
+#    profiles:
+#        active: local
+
+# ssf 相关配置
+ssf:
+    datasource:
+        master:
+            url: jdbc:h2:mem:testdb;MODE=MYSQL;DB_CLOSE_DELAY=-1
+#            url: jdbc:mysql://localhost:3306/test?master=1&useUnicode=true&characterEncoding=UTF-8&autoReconnect=true&failOverReadOnly=false&zeroDateTimeBehavior=convertToNull
+#            username: root
+#            password:
+    include-stacktrace: always
+    security:
+        jwt:
+          secret: ABCDEFGH

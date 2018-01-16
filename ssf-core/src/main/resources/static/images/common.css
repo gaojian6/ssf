@@ -1,0 +1,26 @@
+@charset "utf-8";
+/* CSS Document */
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, input, button, textarea, p, blockquote, th, td {padding:0;margin:0;}
+fieldset, img, html, body, iframe, button , textarea, input{border:none;}
+table {border-collapse:collapse;border-spacing:0;}
+li {list-style:none;}
+em, i, small, caption, th {font-weight:normal;font-style:normal;font-size:100%;}
+h1, h2, h3, h4, h5, h6, em, strong, b {font-weight:bold;font-size:100%;}
+caption{text-align:left;}
+html{ height: 100%;}
+body {word-wrap:break-word;	font:14px/normal tahoma, arial;color:#666; background: url("bg-err01.jpg") center bottom no-repeat #fff; position:relative; height:100%; text-align:center;}
+
+textarea, input, button, select, pre {outline:0;font-size:inherit;line-height:inherit;color:inherit;font-family:inherit;}
+textarea{overflow:auto;resize:none;}
+input,textarea{padding:0 3px;}
+a, button, input[type="button"], input[type="submit"]{cursor:pointer;outline:0; font-family: tahoma, arial;}
+input[type=button], input[type="submit"]{-webkit-appearance:none;outline:none;}/* 清除IOS下按钮的原生样式 */
+/* nav */
+.g-in{position:relative;width:1200px; height: 100%; margin:0 auto; text-align:center; overflow: hidden;}
+.g-in:after{display:block;visibility:hidden;height:0;overflow:hidden;clear:both;content:".";}
+/* 浮动 */
+.f-fl{float:left!important;}
+.f-fr{float:right!important;}
+/* 清除浮动 */
+.f-cb {clear:both;zoom:1;}
+.f-cb:after {clear:both;display:block;visibility:hidden;height:0;overflow:hidden;content:".";}

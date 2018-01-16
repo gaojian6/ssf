@@ -1,0 +1,5 @@
+#使用h2数据库测试
+ssf:
+    datasource:
+        master:
+            url: jdbc:h2:mem:testdb;MODE=MYSQL;DB_CLOSE_DELAY=-1

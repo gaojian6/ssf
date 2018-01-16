@@ -1,0 +1,14 @@
+
+# ssf 相关配置
+ssf:
+    datasource:
+        master:
+            url: jdbc:mysql://localhost:3306/test?master=1&useUnicode=true&characterEncoding=UTF-8&autoReconnect=true&failOverReadOnly=false&zeroDateTimeBehavior=convertToNull
+            username: root
+            password:
+            initialSize: 1
+    security:
+        jwt:
+          secret: 7kFsxas4WG6aLLH5owLvevE8dIK32FfN
+          unAuthUrls:
+            - /samples/index.html

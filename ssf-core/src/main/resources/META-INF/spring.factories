@@ -1,0 +1,11 @@
+# Auto Configure
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+com.icourt.core.ApplicationAutoConfiguration,\
+com.icourt.orm.datasource.ApplicationDataSourceAutoConfiguration,\
+com.icourt.orm.dao.ApplicationDaoAutoConfiguration,\
+com.icourt.data.redis.ApplicationRedisAutoConfiguration,\
+com.icourt.swagger.ApplicationSwaggerAutoConfiguration,\
+com.icourt.core.error.ApplicationErrorAutoConfiguration,\
+com.icourt.quartz.ApplicationQuartzAutoConfiguration,\
+com.icourt.security.jwt.JwtAutoConfiguration
+
