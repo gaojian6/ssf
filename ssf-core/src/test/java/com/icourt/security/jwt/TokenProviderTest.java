@@ -59,5 +59,28 @@ public class TokenProviderTest extends AbstractTest {
         boolean flg3 = tokenProvider.validateToken(myToken);
         Assert.assertFalse(flg3);
     }
+    @Test
+    public void change() throws Exception {
+        user = new UserDTO();
+        user.setAge(10);
+        user.setId(1L);
+        user.setUsername("高健");
+
+        token = tokenProvider.createToken(user,2000);
+        Assert.assertNotNull(token);
+
+        UserDTO user2 = tokenProvider.parseToken(token,UserDTO.class);
+        Assert.assertNotNull(user2);
+
+        boolean flag = tokenProvider.validateToken(token);
+        Assert.assertTrue(flag);
+
+    }
+
+    @Test
+    public void test(){
+        System.out.println("this is test3");
+    }
+
 
 }
