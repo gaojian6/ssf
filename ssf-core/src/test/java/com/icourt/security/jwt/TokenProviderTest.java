@@ -66,7 +66,7 @@ public class TokenProviderTest extends AbstractTest {
         user.setId(1L);
         user.setUsername("高健");
 
-        token = tokenProvider.createToken(user,2000);
+        token = tokenProvider.createToken(user,200);
         Assert.assertNotNull(token);
 
         UserDTO user2 = tokenProvider.parseToken(token,UserDTO.class);
@@ -82,10 +82,4 @@ public class TokenProviderTest extends AbstractTest {
         System.out.println("this is test3");
     }
 
-
-
-    @Test
-    public void test(){
-        System.out.println("this is test6");
-    }
 }
