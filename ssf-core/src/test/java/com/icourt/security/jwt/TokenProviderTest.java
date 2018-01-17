@@ -50,7 +50,7 @@ public class TokenProviderTest extends AbstractTest {
         boolean flg = tokenProvider.validateToken(token);
         Assert.assertTrue(flg);
         //休息3秒，让token过期
-        Thread.sleep(300);
+        Thread.sleep(200);
         boolean flg2 = tokenProvider.validateToken(token);
         Assert.assertFalse(flg2);
 
