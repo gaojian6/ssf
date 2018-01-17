@@ -23,7 +23,7 @@ public class TokenProviderTest extends AbstractTest {
     @Before
     public void setUp() throws Exception {
         user = new UserDTO();
-        user.setAge(12);
+        user.setAge(20);
         user.setId(1L);
         user.setUsername("周勇");
         token = tokenProvider.createToken(user,2000);
