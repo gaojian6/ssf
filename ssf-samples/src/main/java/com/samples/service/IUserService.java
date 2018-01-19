@@ -4,8 +4,10 @@
 package com.samples.service;
 
 import com.samples.dto.UserDTO;
+import com.samples.pojo.MyUser;
 import com.samples.pojo.User;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -45,11 +47,60 @@ public interface IUserService {
      */
     void delete(Long id);
 
+    /**
+     * 查询所有用户
+     * @return 查询结果
+     */
     List<User> findAll();
 
+    /**
+     * 查找用户
+     * @param user 用户信息
+     * @return 查询结果
+     */
     List<User> findUserList(User user);
 
+    /**
+     * 按用户id查找用户
+     * @param ids 用户id
+     * @return 查询用户信息
+     */
     List<User> findByIds(String ids);
 
 
+
+
+    /**
+     * 查询用户信息
+     * @return 返回查询结果
+     */
+    List<MyUser> select();
+
+    /**
+     * 按部门名称查找用户
+     * @param departmentName 部门名称
+     * @return 查询的用户信息
+     */
+    List<MyUser> selectByDepartment(String departmentName);
+
+    /**
+     * 按用户名查找
+     * @param username 用户名
+     * @return 返回查询用户的信息
+     */
+    MyUser findByName(String username);
+
+    /**
+     * 设置用户的部门
+     * @param departmentid 部门号
+     * @param username 用户名
+     */
+    void setDepartment(Integer departmentid,String username);
+
+    /**
+     * 按部门名称查找部门号
+     * @param departmentName
+     * @return 部门号
+     */
+    Integer findDepartment(String departmentName);
 }
