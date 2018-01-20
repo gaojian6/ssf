@@ -25,7 +25,7 @@ public class UserDTO {
     private String username;
 
     @ApiModelProperty(notes = "年龄",example = "20")
-    private int age;
+    private Integer age;
 
     @ApiModelProperty(notes = "生日",example = "1999-11-20")
     private Date birthDay;
@@ -82,5 +82,17 @@ public class UserDTO {
 
     public void setRemark(String remark) {
         this.remark = remark;
+    }
+
+    @Override
+    public String toString() {
+        return "UserDTO{" +
+                "id=" + id +
+                ", username='" + username + '\'' +
+                ", age=" + age +
+                ", birthDay=" + birthDay +
+                ", money=" + money +
+                ", remark='" + remark + '\'' +
+                '}';
     }
 }

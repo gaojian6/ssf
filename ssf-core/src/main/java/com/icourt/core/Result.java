@@ -201,4 +201,7 @@ public class Result<T> implements Serializable {
     public Boolean getBoolean(String key){
         return SafeKit.getBoolean(get(key));
     }
+
+
+
 }

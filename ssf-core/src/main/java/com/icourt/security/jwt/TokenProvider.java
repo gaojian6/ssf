@@ -60,6 +60,7 @@ public class TokenProvider {
             .parseClaimsJws(token)
             .getBody();
         String payload = SafeKit.getString(claims.get(PAYLOAD_KEY));
+        System.out.println("payload"+payload);
         if(StrKit.isNotEmpty(payload)){
             return jsonService.parseObject(payload,clazz);
         }
